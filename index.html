@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Juego Solweb </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Solweb</h1>
+    </header>
+<nav>
+    <ul>
+        <li>Log in</li>
+        <li>Registrar</li>
+    </ul>
+</nav> 
+<main>
+
+        <button type="button" class="btn btn-success d-table my-5 mx-auto" data-bs-toggle="modal" data-bs-target="#LogIn">
+            Log in
+        </button>
+
+        <div class="modal fade" id="LogIn" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Formulario para log in -->
+                    <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Log In</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="Email">Email<span class="text-danger">*</span></label>
+                                <input type="texto" name="email" class="form-control" id="Email" placeholder="Introduzca su correo electrónico">
+                            </div>
+                                
+                            <div>
+                                <label for="Contraseña">Contraseña<span class="text-danger">*</span></label>
+                                <input type="texto" name="contraseña" class="form-control" id="Contraseña" placeholder="Introduzca su contraseña">
+                            </div>
+                        </div>
+                        <div class="modal-footer pt-4">
+                            <button type="button" class="btn btn-success mx-auto w-100">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</main>   
+</body>
+</html>
