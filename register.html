@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Juego Solweb </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <style>
+
+        body{
+            background: #58c3bb;
+        }
+        .bg{
+            background-position:  center center;
+        }
+
+    </style>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="almacenamiento.js"></script>                       
+  
+</head>
+<body>
+    <header>
+        <h1 class="fw-bold py-2 text-white">Solweb</h1>
+    </header> 
+
+    <div class="container w-25 bg-white mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+            </div>
+            <h2 class="fw-bold text-center py-5">Bienvenido</h2>
+        </div>
+
+        <!-- Formulario para registro -->
+        <form action="lobby.html">
+            <div class="form-group">
+                <label for="avatar">Selecciona tu avatar<span class="text-danger">*</span></label>
+                <input type="file" name="avatar" class="form-control-file" id="Avatar">
+            </div>
+            
+            <div class="#">
+                <div class="mb-4 mt-4">
+                    <label for="Usuario" class="form-label">Nombre Usuario</label>
+                    <input type="text" name="usuario" class="form-control" id="Usuario" placeholder="Introduzca su nombre de usuario" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="Email" placeholder="Introduzca su correo electrónico" required>
+                </div>   
+                            
+                <div class="mb-4">
+                    <label for="Contraseña" class="form-label">Contraseña</label>
+                    <input type="password" name="contraseña" class="form-control" id="Contraseña" placeholder="Introduzca su contraseña" required>
+                </div>
+            </div>
+                        
+            <div class="d-grid mt-3">
+                <button type="button" class="btn btn-primary" id="botonRegistro" onclick="registro()">Registro</button>
+            </div>
+
+            <div class="my-3">
+                <div class="toggle">
+                    <span>Ya tienes cuenta? <a class="link" href="login.html"> Inicia sesión</a></span><br>
+                </div>
+            
+             </div>
