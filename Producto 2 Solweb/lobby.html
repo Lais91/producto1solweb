@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Juego Solweb </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <style>
+
+        body{
+            background: #58c3bb;
+        }
+        .bg{
+            background-position:  center center;
+        }
+
+    </style>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="ddlobby.js"></script>  
+    <script>     
+        setTimeout(function() {
+            document.getElementById('email').innerHTML = localStorage.email;
+            document.getElementById('avatar').innerHTML = localStorage.avatar;
+            document.getElementById('gameRoom').innerHTML = localStorage.gameRoom;
+        }, 500)
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="fw-bold py-2 text-white">Solweb</h1>
+        <h3>Usuario:</h3>
+        <h5 id="email">Usuario</h3>
+        <h3>Sala de juego:</h3>
+        <h5 id="gameRoom">Sala de juego</h5>
+        <h3>Avatar Selecionado:</h3>
+        <h5 id="avatar">Avatar Selecionado</h5>
+        <label class="avatars">
+            <button
+                type="button"
+                id="avatar1"
+                class="avatars"
+
+            > 1
+                <img
+                    src="https://robohash.org/V4T.png?size=50x50&set=set1"
+                    alt=""
+                    id="avatar1"
+                />
+            </button>
+        </label>
+        <label class="avatars">
+            <button
+                type="button"
+                id="avatar2"
+                class="avatars"
+            > 2
+                <img
+                    src="https://robohash.org/K57.png?size=50x50&set=set1"
+                    alt=""
+                    id="avatar2"
+                />
+            </button>
+        </label>       
+        <div class="col-8 avatar">
+            <div id="home" class="drop" ondrop="drop(event)"
+                ondragover="allowDrop(event)">
+                <img src="" id="avatarImage" class="draggable" draggable="true" ondragstart="drag(event)">
+            </div>
+            <span>Please drag to the Game room</span>
+        </div>
+
+    </header>
+
+    <section id="salas" class="container">
+        <div class="text-center pt-8 mb-5">
+            <h3>Salas</h3><br>
+        </div>
+
+        <div class="row pt-8 mb-3">
+            <div class="col-lg-3">
+                <img src="sala 1.png" class="img-fluid float-start" width="300" alt="" id="salaUno" ondragover="allowDrop(event)">
+                >
+                <p class="text-center text-white fw-bold">Sala 1</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="egirl.jpg" class="img-fluid float-start" width="300" alt="" ondragover="allowDrop(event)">
+                <p class="text-center text-white fw-bold">Sala 2</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="play.jpg" class="img-fluid float-start" width="300" height="150" alt="" ondragover="allowDrop(event)">
+                <p class="text-center text-white fw-bold">Sala 3</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="mobile.jpg" class="img-fluid float-start" width="300" height="150" alt="" ondragover="allowDrop(event)">
+                <p class="text-center text-white fw-bold">Sala 4</p>
+            </div>
+        </div>
+    </section>
+
+    <!--<div class="container text-center">
+        <figure class="figure">
+            <img src="user.png" class="img-fluid float-start" alt="10">
+            <figcaption class="figure-caption">Sala 1</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="user.png" class="img-fluid float-end" alt="10">
+            <figcaption class="figure-caption">Sala 2</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="user.png" class="img-fluid float-start" alt="...">
+            <figcaption class="figure-caption">Sala 3</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="user.png" class="img-fluid float-right mx-auto d-block" alt="...">
+            <figcaption class="figure-caption">Sala 4</figcaption>
+          </figure>
+      </div>-->
